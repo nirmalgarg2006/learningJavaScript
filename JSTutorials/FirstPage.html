@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    function sayHello(name) {
+      let phase = `Hello ${name}!`
+      console.log(phase);
+      //debugger;
+      say(phase);
+    }
+
+    function say(phase) {
+      console.log(phase);
+      //alert(`*** ${phase} ***`);
+    }
+
+
+    sayHello('Nirmal');
+    function makeuser(name, age) {
+      return {
+        name : name,
+        age : age
+      }
+    }
+
+    let user = makeuser('Nirman Garg', 5);
+    user.work = 'Engineer';
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.work);
+
+      let newuser = user;
+      console.log(newuser.name);
+      console.log(newuser.age);
+      console.log(newuser.work);
+
+      if("lastname" in user)
+      {
+        alert('hello laptop');
+      }
+
+      if("name" in user)
+      {
+        console.log('hello desktop');
+      }
+
+      for(let key in newuser)
+      {
+        console.log(newuser[key]);
+      }
+
+      let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+      }
+      let totalsalary=0;
+      for(let key in salaries)
+      {
+        totalsalary += salaries[key];
+      }
+      console.log(totalsalary);
+
+      // before the call
+        let menu = {
+          width: 200,
+          height: 300,
+          title: "My menu"
+        };
+
+        function multiplyNumeric(menu) {
+          for(let key in menu)
+          {
+            if(typeof menu[key] == 'number')
+            {
+              menu[key] = menu[key] * 2;
+            }
+          }
+        }
+
+        multiplyNumeric(menu);
+
+        for(let key in menu)
+        {
+          console.log(menu[key]);
+        }
+    </script>
+  </body>
+</html>
