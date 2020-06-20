@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //nested cloning
+
+      let user = {
+        name : "John",
+        age : 30,
+        address : {
+          HouseNo : 124,
+          StreetName : "LA Fontenay CT"
+        },
+        SayHi : function () {
+          console.log('say hello' + ' ' +  this.name);
+        }
+      };
+      console.log(user.name);
+      console.log(user.address.StreetName);
+      user.SayHi();
+
+
+      let calculator = {
+        read : function () {
+          this.num1 = prompt('Enter first number', 100);
+          console.log(this.num1);
+          this.num2 = prompt('Enter second number', 200);
+          console.log(this.num2);
+        },
+        sum : function () {
+          console.log(Number(this.num1) + Number(this.num2));
+        },
+        mul : function () {
+          console.log(Number(this.num1) * Number(this.num2));
+        }
+      };
+
+      calculator.read();
+      calculator.sum();
+      calculator.mul();
+    </script>
+  </body>
+</html>

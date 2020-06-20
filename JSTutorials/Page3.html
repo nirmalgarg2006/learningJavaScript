@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //nested cloning
+      function User(name) {
+        this.name = name;
+        this.isAdmin = 'false';
+      }
+      let user = new User('Nirmal');
+      console.log(user.name);
+      let seconduser = new User('Nirman');
+      console.log(seconduser.name);
+      let thirduser = new User('Neha');
+      console.log(thirduser.name);
+    </script>
+  </body>
+</html>
